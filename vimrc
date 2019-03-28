@@ -19,7 +19,6 @@ set nowrap
 set backspace=indent,eol,start
 syntax on
 set nocompatible
-set mouse=a
 set fileencodings=utf-8,ucs-bom,gb18030,gbk,gb2312,cp936
 set encoding=utf-8
 source $VIMRUNTIME/delmenu.vim
