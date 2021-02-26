@@ -1,7 +1,5 @@
 " 基本设置
 set nu              " 显示行号
-set tabstop=4       " 显示Tab为4个空格
-set shiftwidth=4    " 换行时自动缩进为4个空格
 set cc=80           " 高亮列
 set smartindent     " 自动缩进
 set cursorline      " 高亮光标行
@@ -10,7 +8,6 @@ set laststatus=2    " 始终有状态栏
 set mouse=n         " 在普通模式下可用鼠标
 set fdm=indent      " 相同缩进为同一个折叠段
 set foldlevel=99    " 折叠嵌套层数
-set expandtab       " 键入时，使用Space代替Tab
 set t_Co=256        " 使用256色
 set nowrap          " 不换行
 set backspace=indent,eol,start  " 可以使用退格键
@@ -19,6 +16,15 @@ set hlsearch        " 搜索高亮
 syntax on           " 语法高亮
 set nocompatible    " 不兼容 vi
 let mapleader = "\<space>"
+
+" 4-Space 风格
+set tabstop=4       " 显示Tab为4个空格
+set shiftwidth=4    " 换行时自动缩进为4个空格
+set expandtab       " 键入时，使用Space代替Tab
+
+“ 8-Tab 风格
+set tabstop=8
+set noexpandtab
 
 "" 高亮设置
 hi DiffAdd      ctermbg=34    ctermfg=white
