@@ -15,15 +15,16 @@ set t_Co=256        " 使用256色
 set nowrap          " 不换行
 set backspace=indent,eol,start  " 可以使用退格键
 set autochdir       " 自动切换目录
+set hlsearch        " 搜索高亮
 syntax on           " 语法高亮
 set nocompatible    " 不兼容 vi
 let mapleader = "\<space>"
 
 "" 高亮设置
-hi DiffAdd      ctermbg=darkgreen   ctermfg=white
-hi DiffDelete   ctermbg=lightgray   ctermfg=black
-hi DiffChange   ctermbg=darkyellow  ctermfg=black
-hi DiffText     ctermbg=none        ctermfg=none
+hi DiffAdd      ctermbg=34    ctermfg=white
+hi DiffDelete   ctermbg=174   ctermfg=black
+hi DiffChange   ctermbg=22    ctermfg=none
+hi DiffText     ctermbg=34    ctermfg=none
 hi Cursor guibg=white guifg=Black
 
 "" 键盘映射
@@ -52,6 +53,7 @@ Plugin 'ryanoasis/vim-devicons'
 Plugin 'majutsushi/tagbar'
 Plugin 'neoclide/coc.nvim'
 Plugin 'tpope/vim-fugitive'
+Plugin 'christoomey/vim-conflicted'
 Plugin 'brookhong/cscope.vim'
 Plugin 'haolongzhangm/auto_update_cscope_ctags_database'
 Plugin 'ctrlpvim/ctrlp.vim'
@@ -82,6 +84,7 @@ map <leader>ff :NERDTreeFocus<CR>
 
 " CtrlP
 map <C-b> :CtrlPBuffer<cr>
+map <C-f> :CtrlP<cr>
 
 " DevIcons
 let g:webdevicons_conceal_nerdtree_brackets = 1
@@ -96,3 +99,5 @@ nmap <leader>je :cs find e <C-R><C-W><CR> " Find this egrep pattern
 nmap <leader>jf :cs find f <C-R><C-W><CR> " Find this file 
 nmap <leader>ji :cs find i <C-R><C-W><CR> " Find files #including this file 
 nmap <leader>ja :cs find a <C-R><C-W><CR> " Find places where this symbol is assigned a value 
+
+let g:Auto_update_cscope_ctags_debug_log = 1
